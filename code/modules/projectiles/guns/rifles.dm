@@ -3191,6 +3191,8 @@
 		slot_r_hand_str = 'icons/mob/inhands/gun/marksman_righthand_64.dmi',
 	)
 
+	inhand_x_dimension = 64
+	inhand_y_dimension = 32
 	fire_sound =     'sound/weapons/guns/sniper/SR-31C/SR31C.ogg'
 	fire_rattle = null
 	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
@@ -3209,6 +3211,7 @@
 	)
 
 	attachable_allowed = list(
+		/obj/item/attachable/scope/unremovable/invisible,
 		/obj/item/attachable/suppressor,
 		/obj/item/attachable/compensator,
 		/obj/item/attachable/reddot,
