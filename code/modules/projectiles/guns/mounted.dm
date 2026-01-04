@@ -746,16 +746,13 @@
 
 	scatter = 10
 	deployed_scatter_change = -10
-	fire_delay = 0.4 SECONDS
-	burst_amount = 12
-	burst_delay = 0.2 SECONDS
-	burst_scatter_mult = 0.65
-	extra_delay = 1.5 SECONDS
+	fire_delay = 0.5 SECONDS
+	extra_delay = 0.7 SECONDS
 
 	item_flags = TWOHANDED
 	deploy_flags = IS_DEPLOYABLE|DEPLOYED_NO_PICKUP|DEPLOY_ON_INITIALIZE
-	gun_features_flags = GUN_AMMO_COUNTER|GUN_DEPLOYED_FIRE_ONLY|GUN_WIELDED_FIRING_ONLY|GUN_SMOKE_PARTICLES
-	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOBURST)
+	gun_features_flags = GUN_DEPLOYED_FIRE_ONLY|GUN_WIELDED_FIRING_ONLY|GUN_SMOKE_PARTICLES
+	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC)
 
 	allowed_ammo_types = list(
 		/obj/item/ammo_magazine/hiram,
@@ -765,7 +762,7 @@
 	deployable_item = /obj/machinery/deployable/mounted/moveable/hiram
 
 	max_integrity = 500
-	soft_armor = list(MELEE = 70, BULLET = 60, LASER = 40, ENERGY = 40, BOMB = 50, BIO = 100, FIRE = 0, ACID = 0)
+	soft_armor = list(MELEE = 50, BULLET = 80, LASER = 80, ENERGY = 80, BOMB = 20, BIO = 10, FIRE = 80, ACID = 30)
 
 /obj/machinery/deployable/mounted/moveable/hiram
 	resistance_flags = XENO_DAMAGEABLE|UNACIDABLE
