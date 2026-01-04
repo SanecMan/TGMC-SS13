@@ -725,3 +725,48 @@
 	soft_armor = list(MELEE = 0, BULLET = 50, LASER = 50, ENERGY = 50, BOMB = 50, BIO = 100, FIRE = 0, ACID = 20)
 
 	allowed_ammo_types = list(/obj/item/ammo_magazine/kord)
+
+//-------------------------------------------------------
+//Hiram mounted machine gun
+//Пулемёт Хайрема
+
+/obj/item/weapon/gun/hiram
+	name = "\improper Hiram mounted machine gun"
+	desc = "Я НЕ ЗНАЮ ЧТО СЮДА НАПИСАТЬ"
+	w_class = WEIGHT_CLASS_HUGE
+	equip_slot_flags = ITEM_SLOT_BACK
+	icon = 'icons/obj/artillery/hiram.dmi'
+	icon_state = "maxim"
+	fire_sound = 'sound/weapons/guns/fire/maxim.ogg'
+	reload_sound = 'sound/weapons/guns/interact/maxim_reload.ogg'
+	unload_sound = 'sound/weapons/guns/interact/maxim_unload.ogg'
+	empty_sound = 'sound/weapons/guns/interact/maxim_empty.ogg'
+
+	default_ammo_type = /obj/item/ammo_magazine/hiram
+
+	scatter = 10
+	deployed_scatter_change = -10
+	fire_delay = 0.4 SECONDS
+	burst_amount = 12
+	burst_delay = 0.2 SECONDS
+	burst_scatter_mult = 0.65
+	extra_delay = 1.5 SECONDS
+
+	item_flags = TWOHANDED
+	deploy_flags = IS_DEPLOYABLE|DEPLOYED_NO_PICKUP|DEPLOY_ON_INITIALIZE
+	gun_features_flags = GUN_AMMO_COUNTER|GUN_DEPLOYED_FIRE_ONLY|GUN_WIELDED_FIRING_ONLY|GUN_SMOKE_PARTICLES
+	gun_firemode_list = list(GUN_FIREMODE_AUTOMATIC, GUN_FIREMODE_BURSTFIRE, GUN_FIREMODE_AUTOBURST)
+
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/hiram,
+	)
+
+	undeploy_time = 2000 SECONDS
+	deployable_item = /obj/machinery/deployable/mounted/moveable/hiram
+
+	max_integrity = 500
+	soft_armor = list(MELEE = 70, BULLET = 60, LASER = 40, ENERGY = 40, BOMB = 50, BIO = 100, FIRE = 0, ACID = 0)
+
+/obj/machinery/deployable/mounted/moveable/hiram
+	resistance_flags = XENO_DAMAGEABLE|UNACIDABLE
+	coverage = 95 // Почти как баррикада

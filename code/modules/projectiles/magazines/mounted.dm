@@ -219,3 +219,18 @@
 	default_ammo = /datum/ammo/bullet/machinegun
 	reload_delay = 5 SECONDS
 	icon_state_mini = "mag_hmg"
+
+// патроны для пулемёта хирама
+/obj/item/ammo_magazine/hiram
+	name = "hiram box magazine (7.62x51mm)"
+	desc = "A box of 250 7.62x51mm rounds for the Hiram mounted machinegun."
+	w_class = WEIGHT_CLASS_BULKY // Большая коробочка набитая патронами
+	icon = 'icons/obj/items/ammo/stationary.dmi'
+	icon_state = "maxim"
+	worn_icon_state = "ac" // Итак сойдёт
+	equip_slot_flags = ITEM_SLOT_BACK // Только сумки
+	magazine_flags = MAGAZINE_REFUND_IN_CHAMBER // Вроде этот флаг отвечает за то что патроны нельзя вытащить
+	caliber = CALIBER_762X51
+	max_rounds = 250
+	default_ammo = /datum/ammo/bullet/machinegun
+	reload_delay = 4 SECONDS
