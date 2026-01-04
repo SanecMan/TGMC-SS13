@@ -780,3 +780,35 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo = /datum/ammo/bullet/rifle
 	max_rounds = 30
+
+//-------------------------------------------------------
+//Ramirez rifle
+/obj/item/ammo_magazine/rifle/ramirez // Обычные антиматериалки
+	name = "SR-31C Ramirez bolt action rifle magazine"
+	desc = "A box magazine filled with 8.6x70mm rifle rounds for the SR-31C Ramirez."
+	caliber = CALIBER_50AE
+	icon_state = "ramirez"
+	icon_state_mini = "mag_rifle_big"
+	default_ammo = /datum/ammo/bullet/sniper/ramirez
+	max_rounds = 10
+	bonus_overlay = "ramirez_mag"
+	ammo_band_icon = "ramirez_band"
+
+/obj/item/ammo_magazine/rifle/ramirez/radioactive // Урановые радиоактивные
+	name = "SR-31C Ramirez bolt action rifle flak magazine"
+	desc = "A box magazine filled with 8.6x70mm rifle flak rounds for the SR-31C Ramirez."
+	icon_state = "ramirez_rad"
+	icon_state_mini = "mag_sniper_green"
+	default_ammo = /datum/ammo/bullet/sniper/radioactive
+	bonus_overlay = "ramirez_rad"
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+
+/obj/item/ammo_magazine/rifle/ramirez/penetrate // Прошивающие насквозь
+	name = "SR-31C Ramirez bolt action rifle flak magazine"
+	desc = "A box magazine filled with 8.6x70mm rifle flak rounds for the SR-31C Ramirez."
+	icon_state = "ramirez_pen"
+	icon_state_mini = "mag_sniper_blue"
+	default_ammo = /datum/ammo/bullet/sniper/penetrate
+	bonus_overlay = "ramirez_pen"
+	ammo_band_color = AMMO_BAND_COLOR_IMPACT
+//-------------------------------------------------------

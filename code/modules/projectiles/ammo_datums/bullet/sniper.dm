@@ -170,3 +170,50 @@
 	var/mob/living/living_victim = target_mob
 	living_victim.apply_status_effect(STATUS_EFFECT_SHATTER, 5 SECONDS)
 	staggerstun(living_victim, proj, slowdown = 1, knockback = 1)
+
+// Ramirez rifle bullets
+// Standart bullet
+/datum/ammo/bullet/sniper/ramirez
+	name = "high caliber rifle bullet"
+	hud_state = "sniper_heavy"
+	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
+	damage = 80
+	penetration = 10
+	sundering = 0
+	additional_xeno_penetration = 10
+	damage_falloff = 0.25
+	matter_cost = 0 // Жирно
+
+/datum/ammo/bullet/sniper/ramirez/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
+	staggerstun(target_mob, proj, slowdown = 1, max_range = 17) // Копипаст со 127 болтовки
+
+// Uranium bullet
+/datum/ammo/bullet/sniper/ramirez/radioactive
+	name = "high caliber radioactive rifle bullet"
+	hud_state = "sniper_heavy"
+	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
+	damage = 40
+	penetration = 10
+	additional_xeno_penetration = 0
+
+/datum/ammo/bullet/sniper/ramirez/radioactive/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
+	if(!isliving(target_mob))
+		return
+
+	var/mob/living/living_victim = target_mob
+	var/datum/status_effect/stacking/microwave/debuff = living_victim.has_status_effect(STATUS_EFFECT_MICROWAVE) // Я б влепил сюда статус иррадиэйтед но радейку вроде бы сложно вывести так что копипаст с лазерки
+
+	if(debuff)
+		debuff.add_stacks(microwave_stacks)
+	else
+		living_victim.apply_status_effect(STATUS_EFFECT_MICROWAVE, microwave_stacks)
+
+// Penetrate bullet
+/datum/ammo/bullet/sniper/ramirez/penetrate
+	name = "high caliber penetrate rifle bullet"
+	hud_state = "sniper_heavy_flak"
+	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
+	damage = 40
+	penetration = 100
+	additional_xeno_penetration = 20
+	sundering = 5

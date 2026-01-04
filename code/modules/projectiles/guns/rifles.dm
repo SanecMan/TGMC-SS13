@@ -3176,3 +3176,77 @@
 
 /obj/item/weapon/gun/rifle/vsd_rifle/medic
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor)
+
+//-------------------------------------------------------
+//Ramirez bolt action sniper rifle
+
+/obj/item/weapon/gun/rifle/ramirez
+	name = "\improper SR-31C Ramirez bolt action rifle"
+	desc = "A rifle with a very low fire-rate, heavy recoil and devastating damage or effects on whatever its bullets hit. Comes included with a scope that lets you see several tiles ahead at the cost of not being able to spot anyone coming at you from behind. It comes loaded with devastating .50 sniper rounds and can be additionally loaded with Antimatter, Uranium or Penetrator rounds."
+	icon = 'icons/obj/items/gun/marksman64.dmi'
+	icon_state = "ramirez"
+	worn_icon_state = "ramirez"
+	worn_icon_list = list(
+		slot_l_hand_str = 'icons/mob/inhands/gun/marksman_lefthand_64.dmi',
+		slot_r_hand_str = 'icons/mob/inhands/gun/marksman_righthand_64.dmi',
+	)
+
+	fire_sound =     'sound/weapons/guns/sniper/SR-31C/SR31C.ogg'
+	fire_rattle = null
+	dry_fire_sound = 'sound/weapons/guns/fire/sniper_empty.ogg'
+	unload_sound =   'sound/weapons/guns/sniper/SR-31C/SR31C_clipout.ogg'
+	reload_sound =   'sound/weapons/guns/sniper/SR-31C/SR31C_clipin.ogg'
+	silenced_sound = 'sound/weapons/guns/sniper/SR-31C/SR31C_SIL.ogg'
+	wield_sound =    'sound/weapons/guns/dmr/Deploy_Wave_DMR.ogg'
+	cocked_sound = 'sound/weapons/guns/sniper/SR-31C/SR31C_boltpull.ogg'
+	caliber = CALIBER_50AE //codex
+	max_shells = 10 //codex
+	default_ammo_type = /obj/item/ammo_magazine/rifle/ramirez
+	allowed_ammo_types = list(
+		/obj/item/ammo_magazine/rifle/ramirez,
+		/obj/item/ammo_magazine/rifle/ramirez/radioactive,
+		/obj/item/ammo_magazine/rifle/ramirez/penetrate,
+	)
+
+	attachable_allowed = list(
+		/obj/item/attachable/suppressor,
+		/obj/item/attachable/compensator,
+		/obj/item/attachable/reddot,
+		/obj/item/attachable/verticalgrip,
+		/obj/item/attachable/angledgrip,
+		/obj/item/attachable/lasersight,
+		/obj/item/attachable/flashlight/under,
+		/obj/item/attachable/flashlight,
+		/obj/item/attachable/foldable/bipod,
+		/obj/item/attachable/gyro,
+		/obj/item/attachable/extended_barrel,
+		/obj/item/attachable/heavy_barrel,
+	)
+
+	starting_attachment_types = list(
+		/obj/item/attachable/scope/unremovable/invisible,
+	)
+
+	gun_features_flags = GUN_WIELDED_FIRING_ONLY|GUN_AMMO_COUNTER|GUN_SMOKE_PARTICLES
+	reciever_flags = AMMO_RECIEVER_REQUIRES_UNIQUE_ACTION|AMMO_RECIEVER_MAGAZINES|AMMO_RECIEVER_UNIQUE_ACTION_LOCKS|AMMO_RECIEVER_AUTO_EJECT
+
+	cock_animation = "ramirez_cock"
+	cocked_message = "You rack the bolt!"
+
+	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
+	attachable_offset = list("muzzle_x" = 49, "muzzle_y" = 17,"rail_x" = 13, "rail_y" = 21, "under_x" = 26, "under_y" = 13, "stock_x" = 8, "stock_y" = 12)
+	actions_types = list(/datum/action/item_action/aim_mode)
+	aim_fire_delay = 2 SECONDS
+
+	burst_amount = 0
+	fire_delay = 3 SECONDS
+	accuracy_mult = 1.15
+	accuracy_mult_unwielded = 0.7
+	scatter = -5
+	scatter_unwielded = 20
+	recoil = 0
+	recoil_unwielded = 4
+	aim_slowdown = 1
+	wield_delay = 5 SECONDS
+	cock_delay = 3 SECONDS
+	movement_acc_penalty_mult = 6
