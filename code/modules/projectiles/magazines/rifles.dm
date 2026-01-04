@@ -799,7 +799,7 @@
 	desc = "A box magazine filled with 8.6x70mm rifle flak rounds for the SR-31C Ramirez."
 	icon_state = "ramirez_rad"
 	icon_state_mini = "mag_sniper_green"
-	default_ammo = /datum/ammo/bullet/sniper/radioactive
+	default_ammo = /datum/ammo/bullet/sniper/ramirez/radioactive
 	bonus_overlay = "ramirez_rad"
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
@@ -808,7 +808,7 @@
 	desc = "A box magazine filled with 8.6x70mm rifle flak rounds for the SR-31C Ramirez."
 	icon_state = "ramirez_pen"
 	icon_state_mini = "mag_sniper_blue"
-	default_ammo = /datum/ammo/bullet/sniper/penetrate
+	default_ammo = /datum/ammo/bullet/sniper/ramirez/penetrate
 	bonus_overlay = "ramirez_pen"
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 //-------------------------------------------------------

@@ -195,6 +195,8 @@
 	damage = 40
 	penetration = 10
 	additional_xeno_penetration = 0
+	///number of microwave stacks to apply when hitting mobvs
+	var/microwave_stacks = 1
 
 /datum/ammo/bullet/sniper/ramirez/radioactive/on_hit_mob(mob/target_mob, atom/movable/projectile/proj)
 	if(!isliving(target_mob))
