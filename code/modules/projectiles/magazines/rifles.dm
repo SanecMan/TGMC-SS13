@@ -800,7 +800,6 @@
 	icon_state = "ramirez_rad"
 	icon_state_mini = "mag_sniper_green"
 	default_ammo = /datum/ammo/bullet/sniper/ramirez/radioactive
-	bonus_overlay = "ramirez_rad"
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 
 /obj/item/ammo_magazine/rifle/ramirez/penetrate // Прошивающие насквозь
@@ -809,6 +808,5 @@
 	icon_state = "ramirez_pen"
 	icon_state_mini = "mag_sniper_blue"
 	default_ammo = /datum/ammo/bullet/sniper/ramirez/penetrate
-	bonus_overlay = "ramirez_pen"
 	ammo_band_color = AMMO_BAND_COLOR_IMPACT
 //-------------------------------------------------------

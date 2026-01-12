@@ -177,7 +177,7 @@
 	name = "high caliber rifle bullet"
 	hud_state = "sniper_heavy"
 	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
-	damage = 80
+	damage = 120
 	penetration = 10
 	sundering = 0
 	additional_xeno_penetration = 10
@@ -192,7 +192,7 @@
 	name = "high caliber radioactive rifle bullet"
 	hud_state = "sniper_heavy"
 	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
-	damage = 40
+	damage = 50
 	penetration = 10
 	additional_xeno_penetration = 0
 	///number of microwave stacks to apply when hitting mobvs
@@ -214,8 +214,8 @@
 /datum/ammo/bullet/sniper/ramirez/penetrate
 	name = "high caliber penetrate rifle bullet"
 	hud_state = "sniper_heavy_flak"
-	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER
-	damage = 40
+	ammo_behavior_flags = AMMO_BALLISTIC|AMMO_SNIPER|AMMO_PASS_THROUGH_TURF|AMMO_PASS_THROUGH_MOVABLE
+	damage = 50
 	penetration = 100
 	additional_xeno_penetration = 20
 	sundering = 5

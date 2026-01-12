@@ -3178,10 +3178,10 @@
 	starting_attachment_types = list(/obj/item/attachable/magnetic_harness, /obj/item/attachable/verticalgrip, /obj/item/attachable/suppressor)
 
 //-------------------------------------------------------
-//Ramirez bolt action sniper rifle
+//Ramirez bolt action antimaterial sniper rifle
 
 /obj/item/weapon/gun/rifle/ramirez
-	name = "\improper SR-31C Ramirez bolt action rifle"
+	name = "\improper SR-31C Ramirez bolt antimaterial action rifle"
 	desc = "A rifle with a very low fire-rate, heavy recoil and devastating damage or effects on whatever its bullets hit. Comes included with a scope that lets you see several tiles ahead at the cost of not being able to spot anyone coming at you from behind. It comes loaded with devastating .50 sniper rounds and can be additionally loaded with Antimatter, Uranium or Penetrator rounds."
 	icon = 'icons/obj/items/gun/marksman64.dmi'
 	icon_state = "ramirez"
@@ -3212,18 +3212,11 @@
 
 	attachable_allowed = list(
 		/obj/item/attachable/scope/unremovable/invisible,
-		/obj/item/attachable/suppressor,
-		/obj/item/attachable/compensator,
-		/obj/item/attachable/reddot,
-		/obj/item/attachable/verticalgrip,
 		/obj/item/attachable/angledgrip,
 		/obj/item/attachable/lasersight,
 		/obj/item/attachable/flashlight/under,
-		/obj/item/attachable/flashlight,
 		/obj/item/attachable/foldable/bipod,
 		/obj/item/attachable/gyro,
-		/obj/item/attachable/extended_barrel,
-		/obj/item/attachable/heavy_barrel,
 	)
 
 	starting_attachment_types = list(
@@ -3239,10 +3232,10 @@
 	gun_firemode_list = list(GUN_FIREMODE_SEMIAUTO)
 	attachable_offset = list("muzzle_x" = 49, "muzzle_y" = 17,"rail_x" = 13, "rail_y" = 21, "under_x" = 26, "under_y" = 13, "stock_x" = 8, "stock_y" = 12)
 	actions_types = list(/datum/action/item_action/aim_mode)
-	aim_fire_delay = 2 SECONDS
+	aim_fire_delay = 3 SECONDS
 
 	burst_amount = 0
-	fire_delay = 3 SECONDS
+	fire_delay = 4 SECONDS
 	accuracy_mult = 1.15
 	accuracy_mult_unwielded = 0.7
 	scatter = -5
@@ -3250,6 +3243,6 @@
 	recoil = 0
 	recoil_unwielded = 4
 	aim_slowdown = 1
-	wield_delay = 5 SECONDS
+	wield_delay = 3 SECONDS
 	cock_delay = 3 SECONDS
 	movement_acc_penalty_mult = 6
